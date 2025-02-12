@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
-import {Script, console} from "../lib/forge-std/Script.sol";
+import {Script, console} from "../lib/forge-std/src/Script.sol";
 import {DAO} from "../src/dao.sol";
 import {UltNft} from "../src/nft.sol";
 import {P2PLending} from "../src/lending.sol";
