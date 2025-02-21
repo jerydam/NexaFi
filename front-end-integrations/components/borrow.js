@@ -20,9 +20,9 @@ export default function BorrowSection({displayComponent, setDisplayComponent, ch
     const [loading, setLoading] = useState()
 
  // lets read data for the Borrow section using inbuilt functions and abi related read functions
- const [token, setToken] = useState("tRBTC")
- const [usertRBTCBalance, setusertRBTCBalance] = useState()
- const [userULTBalance, setUserULTBalance] = useState()
+ const [token, setToken] = useState("XFI")
+ const [userXFIBalance, setuserXFIBalance] = useState()
+ const [userNEXABalance, setUserNEXABalance] = useState()
  const [userUSDTBalance, setUserUSDTBalance] = useState()
  const [userDAIBalance, setUserDAIBalance] = useState()
  useEffect(()=>{
@@ -34,12 +34,12 @@ export default function BorrowSection({displayComponent, setDisplayComponent, ch
       const usdtContractReadSettings = new Contract(usdtContractAddress, usdtContractABI, ethersProvider)
       const daiContractReadSettings = new Contract(daiContractAddress, daiContractABI, ethersProvider)
     try {
-      const tRBTCbalance = await ethersProvider.getBalance(address)
-      const parsetRBTCbalance = formatUnits(tRBTCbalance, 18);
-      setusertRBTCBalance((parseFloat(parsetRBTCbalance).toFixed(5)).toString())
-      const ULTbalance = await tokenContractReadSettings.balanceOf(address)
-      const parseULTbalance = parseFloat(formatUnits(ULTbalance, 18)).toFixed(5);
-      setUserULTBalance(parseULTbalance.toString())
+      const XFIbalance = await ethersProvider.getBalance(address)
+      const parseXFIbalance = formatUnits(XFIbalance, 18);
+      setuserXFIBalance((parseFloat(parseXFIbalance).toFixed(5)).toString())
+      const NEXAbalance = await tokenContractReadSettings.balanceOf(address)
+      const parseNEXAbalance = parseFloat(formatUnits(NEXAbalance, 18)).toFixed(5);
+      setUserNEXABalance(parseNEXAbalance.toString())
       const USDTbalance = await usdtContractReadSettings.balanceOf(address)
       const parseUSDTbalance = parseFloat(formatUnits(USDTbalance, 18)).toFixed(5);
       setUserUSDTBalance(parseUSDTbalance.toString())
@@ -52,7 +52,7 @@ export default function BorrowSection({displayComponent, setDisplayComponent, ch
   }
   }
   getTheData();  
- }, [usertRBTCBalance, userULTBalance, userUSDTBalance, userDAIBalance, loading])
+ }, [userXFIBalance, userNEXABalance, userUSDTBalance, userDAIBalance, loading])
 
 
      //Now we are going to approve the collateral of the loan
@@ -91,7 +91,7 @@ export default function BorrowSection({displayComponent, setDisplayComponent, ch
 
 
     //Now we are going to create the loan
-    const [tRBTCamountToBorrow, settRBTCamountToBorrow] = useState()
+    const [XFIamountToBorrow, setXFIamountToBorrow] = useState()
     const [interestRate, setInterestRate] = useState()
     const [duration, setDuration] = useState()
     const [collateralAmount, setCollateralAmount] = useState()
@@ -111,7 +111,7 @@ export default function BorrowSection({displayComponent, setDisplayComponent, ch
           const totalDuration = duration.toString() * 3600;
           const fundingDeadline = duration.toString() * 3600
           console.log(totalDuration)
-          const createloan = await lendBorrowContractWriteSettings.createLoan(parseUnits(tRBTCamountToBorrow, 18), interestRate, totalDuration, parseUnits(collateralAmount, 18), collateralAddress, isERC20, fundingDeadline)
+          const createloan = await lendBorrowContractWriteSettings.createLoan(parseUnits(XFIamountToBorrow, 18), interestRate, totalDuration, parseUnits(collateralAmount, 18), collateralAddress, isERC20, fundingDeadline)
           setHideApprove(false)
           setDisplayComponent("lend")
           changeBg3()
@@ -131,20 +131,20 @@ export default function BorrowSection({displayComponent, setDisplayComponent, ch
         <div className="text-[#ccc] text-[90%]">Borrow on NexaFi  (P2P)</div>
         
         <div className="my-[1cm] bg-[#000] p-[0.5cm] rounded-xl lg:mx-[10%] md:mx-[10%]" style={{boxShadow:"2px 2px 2px 2px #00f"}}>
-          <div className="mb-[0.5cm] text-center">To borrow tRBTC, create a loan. Another NexaFi  user will fund your loan. (P2P)</div>
+          <div className="mb-[0.5cm] text-center">To borrow XFI, create a loan. Another NexaFi  user will fund your loan. (P2P)</div>
         <div className=" bg-[#111] p-[0.5cm] rounded-xl " style={{boxShadow:"2px 2px 2px 2px #333"}}>
         <form>
          <div className='p-[0.5cm] pb-[1cm] bg-[#eee] rounded-md'>
          <div className='text-[#222] font-[500] clear-both'>
           <span className="float-left">Duration (hr)</span>
-          <span className='float-right'>tRBTC amount</span>
+          <span className='float-right'>XFI amount</span>
          </div>
          <div className='mt-[1.5cm] clear-both font-[500]' style={{display:"block"}}>
          <input style={{display:"inline-block"}} className="w-[30%] float-left text-[120%] bg-[#eee] outline-none text-[#000] placeholder-[#000]" type="number" id="duration" name="duration" onChange={(e) => setDuration(e.target.value)} placeholder='0' />
-         <input style={{display:"inline-block"}} className="w-[30%] float-right text-[120%] text-right bg-[#eee] outline-none text-[#000] placeholder-[#000]" type="number" id="tRBTCamountToBorrow" name="tRBTCamountToBorrow" onChange={(e) => settRBTCamountToBorrow(e.target.value)} placeholder='0' />
+         <input style={{display:"inline-block"}} className="w-[30%] float-right text-[120%] text-right bg-[#eee] outline-none text-[#000] placeholder-[#000]" type="number" id="XFIamountToBorrow" name="XFIamountToBorrow" onChange={(e) => setXFIamountToBorrow(e.target.value)} placeholder='0' />
          </div>
-         {tRBTCamountToBorrow > 10 && (<div className="text-[#502] text-center clear-both mt-[0.3cm]">tRBTC amount to borrow must not be more than 10</div>)}
-         {tRBTCamountToBorrow < 0.001 && (<div className="text-[#502] text-center clear-both mt-[0.3cm]">tRBTC amount to borrow must not be less than 0.001</div>)}
+         {XFIamountToBorrow > 10 && (<div className="text-[#502] text-center clear-both mt-[0.3cm]">XFI amount to borrow must not be more than 10</div>)}
+         {XFIamountToBorrow < 0.001 && (<div className="text-[#502] text-center clear-both mt-[0.3cm]">XFI amount to borrow must not be less than 0.001</div>)}
          </div>
         </form>
         </div>
@@ -154,7 +154,7 @@ export default function BorrowSection({displayComponent, setDisplayComponent, ch
          <div className="grid-cols-1">
           <label className="text-[#fff] bg-[#002] rounded-md px-[0.3cm] py-[0.2cm]">Collateral</label> <br />
           <div className="grid-cols-1 px-[0.3cm] text-[#000]">
-          <div className="mt-[0.5cm]"><input type="radio" id="ULT" name="collateralAddress" value={tokenContractAddress} onChange={(e) => setCollateralAddress(e.target.value)} /><span className="ml-[0.3cm]">ULT</span></div>
+          <div className="mt-[0.5cm]"><input type="radio" id="NEXA" name="collateralAddress" value={tokenContractAddress} onChange={(e) => setCollateralAddress(e.target.value)} /><span className="ml-[0.3cm]">NEXA</span></div>
           <div><input type="radio" id="USDT" name="collateralAddress" value={usdtContractAddress} onChange={(e) => setCollateralAddress(e.target.value)} /><span className="ml-[0.3cm]">USDT</span></div>
           <div><input type="radio" id="DAI" name="collateralAddress" value={daiContractAddress} onChange={(e) => setCollateralAddress(e.target.value)} /><span className="ml-[0.3cm]">DAI</span></div>
           </div>
@@ -179,8 +179,8 @@ export default function BorrowSection({displayComponent, setDisplayComponent, ch
          </div> 
          </div>
          <div className="mt-[0.5cm] ml-[1cm] text-[#aaa]">Service fee: 2%</div>
-        {!hideApprove ? (<button type="submit" className='text-center py-[0.3cm] bg-[#111] font-[500] text-[#fff] w-[100%] mt-[0.5cm] rounded-md generalbutton4 cursor-pointer' onClick={(e) => {e.preventDefault();approveTheLoanCollateral(tRBTCamountToBorrow, collateralAddress)}}>Approve</button>) : (<span></span>)}
-        <button type="submit" className='text-center py-[0.3cm] bg-[#502] font-[500] text-[#fff] w-[100%] mt-[0.5cm] rounded-md generalbutton cursor-pointer' onClick={(e) => {e.preventDefault();createTheLoan(duration, tRBTCamountToBorrow, collateralAddress, collateralAmount, isERC20, interestRate)}}>Create Loan</button>
+        {!hideApprove ? (<button type="submit" className='text-center py-[0.3cm] bg-[#111] font-[500] text-[#fff] w-[100%] mt-[0.5cm] rounded-md generalbutton4 cursor-pointer' onClick={(e) => {e.preventDefault();approveTheLoanCollateral(XFIamountToBorrow, collateralAddress)}}>Approve</button>) : (<span></span>)}
+        <button type="submit" className='text-center py-[0.3cm] bg-[#502] font-[500] text-[#fff] w-[100%] mt-[0.5cm] rounded-md generalbutton cursor-pointer' onClick={(e) => {e.preventDefault();createTheLoan(duration, XFIamountToBorrow, collateralAddress, collateralAmount, isERC20, interestRate)}}>Create Loan</button>
         </div>
 
     {loading ? 

@@ -4,7 +4,7 @@ pragma solidity ^0.8.7;
 import "../lib/openzeppelin-contracts/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "../lib/openzeppelin-contracts/contracts/access/Ownable.sol";
 
-contract UltNft is ERC721URIStorage, Ownable {
+contract NexaNft is ERC721URIStorage, Ownable {
     uint256 private _tokenIdCounter;
 
     constructor(address _owner) ERC721("SoulBoundToken", "SBT") Ownable(_owner) {}

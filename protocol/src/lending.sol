@@ -9,19 +9,19 @@ contract P2PLending is Ownable {
     constructor(
         address _initialowner,
         address _treasuryaddr,
-        address ult,
+        address Nexa,
         address usdt,
         address dai
     ) Ownable(_initialowner) {
         treasuryAddress = _treasuryaddr;
-        _addCollateral(ult);
+        _addCollateral(Nexa);
         _addCollateral(usdt);
         _addCollateral(dai);
     }
 
     // The minimum and maximum amount of ETH that can be loaned
-    uint public constant MIN_LOAN_AMOUNT = 0.001 ether;
-    uint public constant MAX_LOAN_AMOUNT = 10 ether;
+    uint public constant MIN_LOAN_AMOUNT = 100 ether;
+    uint public constant MAX_LOAN_AMOUNT = 1000000 ether;
     // The minimum and maximum interest rate in percentage that can be set for a loan
     uint public constant MIN_INTEREST_RATE = 2;
     uint public constant MAX_INTEREST_RATE = 20;

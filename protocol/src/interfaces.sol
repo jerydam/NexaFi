@@ -52,14 +52,14 @@ interface IDAO {
     function memberCount() external view returns (uint256);
     function quorum() external view returns (uint);
     function treasury() external view returns (address);
-    function UltToken() external view returns (address);
+    function NexaToken() external view returns (address);
     function members(address) external view returns (address, string memory, uint256, bool);
     function proposals(uint) external view returns (uint, string memory, uint, uint, uint, bool, bool, address);
     function voted(address, uint) external view returns (bool);
     function withdrawal(address) external view returns (uint);
 }
 
-interface IUltNft {
+interface INexaNft {
     // ERC721 functions
     function balanceOf(address owner) external view returns (uint256);
     function ownerOf(uint256 tokenId) external view returns (address);

@@ -63,11 +63,11 @@ export default function MetricsSection() {
 
         <div className="text-center mt-[0.7cm] bg-[#000] p-[0.5cm] rounded-xl" style={{boxShadow:"2px 2px 2px 2px #333"}}>
             <div className="text-center m-[0.4cm]" style={{display:"inline-block"}}>
-                <div className="font-[500] text-[110%]">ULT Total Supply</div>
-                {totalTokenSupply ? (<div className="text-[#aaa] lg:w-[100%] md:w-[100%] w-[7cm] overflow-auto">{Intl.NumberFormat().format(parseFloat(totalTokenSupply).toFixed(10))} ULT</div>) : (<span>0</span>)}
+                <div className="font-[500] text-[110%]">NEXA Total Supply</div>
+                {totalTokenSupply ? (<div className="text-[#aaa] lg:w-[100%] md:w-[100%] w-[7cm] overflow-auto">{Intl.NumberFormat().format(parseFloat(totalTokenSupply).toFixed(10))} NEXA</div>) : (<span>0</span>)}
             </div>
             <div className="text-center m-[0.4cm]" style={{display:"inline-block"}}>
-                <div className="font-[500] text-[110%]">ULT Price</div>
+                <div className="font-[500] text-[110%]">NEXA Price</div>
                 {tokenPrice ? (<div className="text-[#aaa]">≈ ${tokenPrice}</div>) : (<span>0</span>)}
             </div>
             <div className="text-center m-[0.4cm]" style={{display:"inline-block"}}>
@@ -80,11 +80,11 @@ export default function MetricsSection() {
             </div>
             <div className="text-center m-[0.4cm]" style={{display:"inline-block"}}>
                 <div className="font-[500] text-[110%]">Max Loan Amount</div>
-                {maxLoanAmount ? (<div className="text-[#aaa]">{Intl.NumberFormat().format(maxLoanAmount)} tRBTC</div>) : (<span>0</span>)}
+                {maxLoanAmount ? (<div className="text-[#aaa]">{Intl.NumberFormat().format(maxLoanAmount)} XFI</div>) : (<span>0</span>)}
             </div>
             <div className="text-center m-[0.4cm]" style={{display:"inline-block"}}>
                 <div className="font-[500] text-[110%]">Min Loan Amount</div>
-                {minLoanAmount ? (<div className="text-[#aaa]">{Intl.NumberFormat().format(minLoanAmount)} tRBTC</div>) : (<span>0</span>)}
+                {minLoanAmount ? (<div className="text-[#aaa]">{Intl.NumberFormat().format(minLoanAmount)} XFI</div>) : (<span>0</span>)}
             </div>
         </div>
 
@@ -92,7 +92,7 @@ export default function MetricsSection() {
             <div className="grid lg:grid-cols-2 grid-cols-1 gap-4">
             <div className="grid-cols-1">
             <div className="m-[0.4cm]">
-             <div className="font-[500] text-[#fff] bg-[#00f] px-[0.4cm] py-[0.1cm] rounded-md mb-[0.2cm]" style={{display:"inline-block"}}>ULT Contract Address</div>
+             <div className="font-[500] text-[#fff] bg-[#00f] px-[0.4cm] py-[0.1cm] rounded-md mb-[0.2cm]" style={{display:"inline-block"}}>NEXA Contract Address</div>
              <div className="text-[#aaa]" style={{overflow:"auto"}}>{tokenContractAddress}</div>
             </div>
             </div>

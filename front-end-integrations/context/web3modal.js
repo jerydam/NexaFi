@@ -12,18 +12,18 @@ const mainnet = {
   rpcUrl: 'https://cloudflare-eth.com'
 }
 
-const RootstockTestnet = {
-  chainId: 31,
-  name: 'Rootstock Testnet',
-  currency: 'tRBTC',
-  explorerUrl: 'https://explorer.testnet.rootstock.io/',
-  rpcUrl: 'https://public-node.testnet.rsk.co'
+const crossfiTestnet = {
+  chainId: 4157,
+  name: 'CrossFi Testnet',
+  currency: 'XFI',
+  explorerUrl: 'https://test.xfiscan.com/',
+  rpcUrl: 'https://rpc.testnet.ms/'
 }
 
 // 3. Create a metadata object
 const metadata = {
   name: 'NexaFi ',
-  description: 'The ultimate efficient lending/borrowing dApp on Rootstock',
+  description: 'The ultimate efficient lending/borrowing dApp oncrossfi',
   url: 'localhost:3000', // origin must match domain & subdomain
   icons: ['https://ipfs.filebase.io/ipfs/QmNbgL4gj6yLu74sGisNcf9tK4YC9Wab5AdGoLRCVhofTg']
 }
@@ -45,7 +45,7 @@ const ethersConfig = defaultConfig({
 // 5. Create a Web3Modal instance
 createWeb3Modal({
   ethersConfig,
-  chains: [mainnet, RootstockTestnet],
+  chains: [mainnet,crossfiTestnet],
   projectId,
   enableAnalytics: true, // Optional - defaults to your Cloud configuration
   enableOnramp: true, // Optional - false as default

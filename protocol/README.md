@@ -1,4 +1,4 @@
-## Rootstock testnet contracts
+##crossfi testnet contracts
 
 - **[LENDING](https://explorer.testnet.rootstock.io/address/0xe9c49311b81545cced67ab3313c8f4f938ba1920)**: 0xe9c49311b81545cced67ab3313c8f4f938ba1920
 

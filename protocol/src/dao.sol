@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 import {IERC20} from "../lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol";
 import {IERC721} from "../lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol";
-import {ITreasury, IStakERC20, IUltNft, ISwapper, IP2PLending} from "./interfaces.sol";
+import {ITreasury, IStakERC20, INexaNft, ISwapper, IP2PLending} from "./interfaces.sol";
 
 contract DAO {
     struct Proposal {
@@ -34,8 +34,8 @@ contract DAO {
     uint public quorum;
 
     address public treasury;
-    address public UltNft;
-    address public UltErc20;
+    address public NexaNft;
+    address public NexaErc20;
     address public stakeErc20;
     address public swap;
     address public p2plending;
@@ -56,8 +56,8 @@ contract DAO {
     ) {
         quorum = _quorum;
         treasury = _treasury;
-        UltNft = _nft;
-        UltErc20 = _erc20;
+        NexaNft = _nft;
+        NexaErc20 = _erc20;
         stakeErc20 = _staking;
         swap = _swap;
         p2plending=_p2plending;
@@ -95,10 +95,10 @@ modifier validateAction(uint _proposalId) {
         _;
     }
 
-    modifier hasMinimumUltBalance(address _member) {
-        require(IERC721(UltNft).balanceOf(_member) > 0, "not qualified");
+    modifier hasMinimumNexaBalance(address _member) {
+        require(IERC721(NexaNft).balanceOf(_member) > 0, "not qualified");
         require(
-            IERC20(UltErc20).balanceOf(_member) >= (100 ether),
+            IERC20(NexaErc20).balanceOf(_member) >= (100 ether),
             "not qualified"
         );
         _;
@@ -118,7 +118,7 @@ modifier validateAction(uint _proposalId) {
     function addMember(
         address _member,
         string memory _username
-    ) external hasMinimumUltBalance(_member) {
+    ) external hasMinimumNexaBalance(_member) {
         require(memberCount < 100, "max members reached");
         require(!usernameExists(_username), "Username already exists");
 
@@ -236,10 +236,10 @@ modifier validateAction(uint _proposalId) {
 
     function mintNft(string memory _uri) public {
         uint stakedbalance = IStakERC20(stakeErc20)
-            .stakeassets(msg.sender, UltErc20)
+            .stakeassets(msg.sender, NexaErc20)
             .capital;
         require(stakedbalance >= 1000 ether, "not qualified");
-        IUltNft(UltNft).safeMint(msg.sender, _uri);
+        INexaNft(NexaNft).safeMint(msg.sender, _uri);
     }
 
     function addAcceptedCollateral(

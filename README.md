@@ -1,6 +1,6 @@
 # NexaFi  Documentation [Web App](https://NexaFi dapp.vercel.app) / [Demo Video](https://youtu.be/fXart6bSfwQ?si=0eZla7T15o4s-IhF)
 ![File](https://ipfs.filebase.io/ipfs/QmQCswimNDRcyyLqXLNrQLhSPh7Lef9gLTXQUQ7L21XLwR)
-Through its P2P Lending/Borrowing dApp characterized by collaterals, NexaFi  is a DeFi protocol that aims to address a number of lending and borrowing-related difficulties. NexaFi  provides platform users with an easy-to-use interface by combining front end, integration, and smart contract technologies in a powerful way. The Rootstock test network is the foundation of NexaFi .
+Through its P2P Lending/Borrowing dApp characterized by collaterals, NexaFi  is a DeFi protocol that aims to address a number of lending and borrowing-related difficulties. NexaFi  provides platform users with an easy-to-use interface by combining front end, integration, and smart contract technologies in a powerful way. Thecrossfi test network is the foundation of NexaFi .
 Yes, your data and assets on the platform are safe and only accessible by you with a wallet or email login, but the NexaFi  dashboard makes it easy to access the platform's dApp.
 
 
@@ -12,17 +12,17 @@ This platform features a robust combination of smart contracts and front end and
 Solidity, Foundry, OpenZeppelin
 
 ### Front end and Integration Tools
-Web3Modal, Ethers.js, Rootstock testnet Token Tracker, Next.js, Node.js, JavaScript, Tailwind CSS, Trading View Live API, Filebase storage, PostgreSQL
+Web3Modal, Ethers.js,crossfi testnet Token Tracker, Next.js, Node.js, JavaScript, Tailwind CSS, Trading View Live API, Filebase storage, PostgreSQL
 
 ## The NexaFi  User Flow
 
 ### Connect Wallet
 ![File](https://ipfs.filebase.io/ipfs/QmY5gXEQbqxiSFsdsg3qLLhjTQfGoboMH3cHkXnY9FqZyP)
-To connect wallet, go to our [Web App](https://NexaFi dapp.vercel.app). For desktop, click on the "Connect Wallet" button on the upper right of the screen and choose your login method either with wallet or email. If you don't have a wallet installed already, the wallet connect window has links to download a wallet of your choice on your device's browser (Brave browser, Google Chrome, Opera browser, or Yandex browser all work fine). On mobile, simply download your desired EVM-compatible wallet and use its inbuilt browser to connect to NexaFi . Connect your wallet by clicking on the "Connect wallet" button on the upper right of the screen. Ensure to change network to Rootstock test network from the wallet connect window. The display on the screen will change after connecting (typically, it shows your tRBTC balance and a substring of your connected wallet address).
+To connect wallet, go to our [Web App](https://NexaFi dapp.vercel.app). For desktop, click on the "Connect Wallet" button on the upper right of the screen and choose your login method either with wallet or email. If you don't have a wallet installed already, the wallet connect window has links to download a wallet of your choice on your device's browser (Brave browser, Google Chrome, Opera browser, or Yandex browser all work fine). On mobile, simply download your desired EVM-compatible wallet and use its inbuilt browser to connect to NexaFi . Connect your wallet by clicking on the "Connect wallet" button on the upper right of the screen. Ensure to change network tocrossfi test network from the wallet connect window. The display on the screen will change after connecting (typically, it shows your tRBTC balance and a substring of your connected wallet address).
 
 ### Get testnet tRBTC for gas fees payments
 ![File](https://ipfs.filebase.io/ipfs/QmeTAgrea7RSrNT3siQuFW98TBsx1SVxpVEemYCwE6UEs4)
-With NexaFi  being deployed currently on the testnet of Rootstock, testnet tRBTC is required to pay for gas fees during transactions. Testnet tRBTC can be obtained from the [Rootstock testnet faucet](https://faucet.rootstock.io/).
+With NexaFi  being deployed currently on the testnet ofcrossfi, testnet tRBTC is required to pay for gas fees during transactions. Testnet tRBTC can be obtained from the [Rootstock testnet faucet](https://faucet.rootstock.io/).
 
 ### Web app homepage
 The homepage of the NexaFi  web app is the first page you see when you visit the app. It is the gateway to NexaFi 's dashboard and features the wallet connect button as well as other important information about the platform including documentation.
@@ -74,7 +74,7 @@ In future upgrades of this project, more dApp features/services will be integrat
 * Kolapo Goodness - Smart contract developer (Web3Bridge)
 
 
-## Contract Addresses with Rootstock Testnet Links [Rootstock Explorer](https://explorer.testnet.rootstock.io)
+## Contract Addresses withcrossfi Testnet Links [Rootstock Explorer](https://explorer.testnet.rootstock.io)
 ![File](https://ipfs.filebase.io/ipfs/QmUbcvrVF2FuDY5n8BDRSFJ3L2Raie2crQrUuwkFgGHaMg)
 
 ### P2P Lending/Borrowing Contract

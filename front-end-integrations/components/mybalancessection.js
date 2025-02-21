@@ -18,9 +18,9 @@ import {
                const { walletProvider } = useWeb3ModalProvider()
 
               // lets read data for the Metrics section using inbuilt functions and abi related read functions
-               const [ultBalance, setultBalance] = useState()
+               const [NEXABalance, setNEXABalance] = useState()
                const [tokenPrice, setTokenPrice] = useState()
-               const [usertRBTCBalance, setusertRBTCBalance] = useState()
+               const [userXFIBalance, setuserXFIBalance] = useState()
                const [userCreatedLoans, setuserCreatedLoans] = useState()
                const [userFundedLoans, setuserFundedLoans] = useState()
    
@@ -34,13 +34,13 @@ import {
                     const daiContractReadSettings = new Contract(daiContractAddress, daiContractABI, ethersProvider)
                     const lendBorrowContractReadSettings = new Contract(lendBorrowContractAddress, lendBorrowContractABI, ethersProvider)
                   try {
-                    const getULTbalance = await tokenContractReadSettings.balanceOf(address)
-                    console.log(getULTbalance)
-                    setultBalance(getULTbalance.toString() * 10**-18)
+                    const getNEXAbalance = await tokenContractReadSettings.balanceOf(address)
+                    console.log(getNEXAbalance)
+                    setNEXABalance(getNEXAbalance.toString() * 10**-18)
                     setTokenPrice(parseFloat(0.0001).toFixed(10))
-                    const tRBTCbalance = await ethersProvider.getBalance(address)   
-                    console.log(tRBTCbalance)
-                    setusertRBTCBalance(formatUnits(tRBTCbalance, 18))
+                    const XFIbalance = await ethersProvider.getBalance(address)   
+                    console.log(XFIbalance)
+                    setuserXFIBalance(formatUnits(XFIbalance, 18))
                     const userCreatedLoanArray = []
                     const userFundedLoanArray = []
                     const getAllLoannsNumber = await lendBorrowContractReadSettings.loanCount();
@@ -69,16 +69,16 @@ import {
         <div className="text-[#ccc] text-[90%]">Manage all your assets on NexaFi </div>
         <div className="text-center mt-[0.4cm]">
             <div className="text-center m-[0.4cm]" style={{display:"inline-block"}}>
-                <div className="font-[500] text-[110%]">ULT Balance</div>
-                {ultBalance > 0 ? (<div className="text-[#aaa]">{Intl.NumberFormat().format(parseFloat(ultBalance).toFixed(10))} ULT</div>) : (<span>0</span>)}
+                <div className="font-[500] text-[110%]">NEXA Balance</div>
+                {NEXABalance > 0 ? (<div className="text-[#aaa]">{Intl.NumberFormat().format(parseFloat(NEXABalance).toFixed(10))} NEXA</div>) : (<span>0</span>)}
             </div>
             <div className="text-center m-[0.4cm]" style={{display:"inline-block"}}>
-                <div className="font-[500] text-[110%]">ULT Price</div>
+                <div className="font-[500] text-[110%]">NEXA Price</div>
                 {tokenPrice ? (<div className="text-[#aaa]">≈ ${tokenPrice}</div>) : (<span>0</span>)}
             </div>
             <div className="text-center m-[0.4cm]" style={{display:"inline-block"}}>
-                <div className="font-[500] text-[110%]">tRBTC Balance</div>
-                {usertRBTCBalance > 0 ? (<div className="text-[#aaa]">{parseFloat(usertRBTCBalance).toFixed(10)} tRBTC</div>) : (<span>0</span>)}
+                <div className="font-[500] text-[110%]">XFI Balance</div>
+                {userXFIBalance > 0 ? (<div className="text-[#aaa]">{parseFloat(userXFIBalance).toFixed(10)} XFI</div>) : (<span>0</span>)}
             </div>
             <div className="text-center m-[0.4cm]" style={{display:"inline-block"}}>
                 <div className="font-[500] text-[110%]">Loans you Created</div>
@@ -91,13 +91,13 @@ import {
         </div>
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 mt-[1cm]">
             <div className="grid-cols-1 bg-[#000] p-[0.5cm] rounded-xl" style={{boxShadow:"2px 2px 2px 2px #333"}}>
-                <div className="font-[500] text-[#fff] bg-[#502] px-[0.4cm] py-[0.1cm] rounded-md mb-[0.2cm]" style={{display:"inline-block"}}>$ULT</div>
-               <div className="text-[#ccc] font-[500] underline">What is ULT?</div>
+                <div className="font-[500] text-[#fff] bg-[#502] px-[0.4cm] py-[0.1cm] rounded-md mb-[0.2cm]" style={{display:"inline-block"}}>$NEXA</div>
+               <div className="text-[#ccc] font-[500] underline">What is NEXA?</div>
                <div className="text-[#aaa] text-[90%]">
-                ULT is the native token of NexaFi . ULT is used as a collateral for lending. ULT shall also be used to reward community members in potential airdrops 
+                NEXA is the native token of NexaFi . NEXA is used as a collateral for lending. NEXA shall also be used to reward community members in potential airdrops 
                 organised by the platform in the future.
                </div>
-               <button onClick={(e) => setDisplayComponent("daogovernance") & changeBg3(e)} className="text-center px-[0.4cm] py-[0.2cm] bg-[#502] w-[100%] mt-[0.3cm] generalbutton text-[#fff] rounded-md">Buy ULT</button>
+               <button onClick={(e) => setDisplayComponent("daogovernance") & changeBg3(e)} className="text-center px-[0.4cm] py-[0.2cm] bg-[#502] w-[100%] mt-[0.3cm] generalbutton text-[#fff] rounded-md">Buy NEXA</button>
             </div>
             <div className="grid-cols-1 bg-[#000] p-[0.5cm] rounded-xl" style={{boxShadow:"2px 2px 2px 2px #333"}}>
                 <div className="font-[500] text-[#fff] bg-[#502] px-[0.4cm] py-[0.1cm] rounded-md mb-[0.2cm]" style={{display:"inline-block"}}>P2P Lending/Borrowing</div>
@@ -106,7 +106,7 @@ import {
                 NexaFi  users are able to participate in unique P2P lending/borrowing activities of supported tokens. 
                 Firstly, a loan has to be created by the borrower, then another user (the lender) funds the loan by lending to the borrower. The loan has the 
                 following characteristics: loan amount, interest, expiry date, and collateral. Collateral provided by the borrower is locked up by the system until the given active loan duration expires.
-                 The collateral is sent out to the lender if the borrower fails to repay the loan during the specified time. Simultaneously, if there is no lender, the borrower can claim his collateral back.
+                 The collateral is sent out to the lender if the borrower fails to repay the loan during the specified time. SimNEXAaneously, if there is no lender, the borrower can claim his collateral back.
                 </div>
                 <button onClick={(e) => setDisplayComponent("lend") & changeBg3(e)} className="text-center px-[0.4cm] py-[0.2cm] lg:float-left bg-[#502] lg:w-[49%] w-[100%] mt-[0.3cm] generalbutton text-[#fff] rounded-md">Lend Now</button>
                 <button onClick={(e) => setDisplayComponent("borrow") & changeBg4(e)} className="text-center px-[0.4cm] py-[0.2cm] lg:float-right bg-[#502] lg:w-[49%] w-[100%] mt-[0.3cm] generalbutton text-[#fff] rounded-md">Borrow Now</button>

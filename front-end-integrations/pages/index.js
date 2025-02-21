@@ -43,7 +43,7 @@ export default function Home(){
   return (
     <>
     <Head>
-   <title>NexaFi  - The ultimate efficient lending/borrowing dApp on Rootstock'</title>
+   <title>NexaFi  - The ultimate efficient lending/borrowing dApp oncrossfi'</title>
    <link rel="shortcut icon" href="/favicon.ico" />
    </Head>
    <div>
@@ -52,7 +52,7 @@ export default function Home(){
 
 
    <div className='lg:mx-[-8%] mx-[-5%] lg:pb-[50%] pb-[100%] firstsectiondiv' style={{backgroundImage:"url(images/bg7.jpg)", transition:"0.3s ease-in-out"}}>
-   <div className='text-center text-[170%] lg:text-[230%] md:text-[180%] pt-[1.5cm] font-[500]'>Mass Adoption of EVM-compatible Technologies on Rootstock</div>
+   <div className='text-center text-[170%] lg:text-[230%] md:text-[180%] pt-[1.5cm] font-[500]'>Mass Adoption of EVM-compatible Technologies oncrossfi</div>
    <div className='mt-[1cm] text-center lg:text-[140%] text-[120%] lg:mx-[20%] md:mx-[10%] mx-[5%] p-[0.5cm] lg:px-[2cm] text-[#ccc] bg-[rgba(0,0,0,0.95)]' style={{border:"1px solid #502"}}>
     <div data-aos="fade-in" className='info1' style={{transition:"0.5s ease-in-out"}}>
       Lending: Using supported tokens, NexaFi  users can engage in peer-to-peer lending and borrowing activities on our unique P2P lending/borrowing dApp. 
