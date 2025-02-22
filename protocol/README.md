@@ -1,10 +1,10 @@
 ##crossfi testnet contracts
 
-- **[LENDING](https://explorer.testnet.rootstock.io/address/0xe9c49311b81545cced67ab3313c8f4f938ba1920)**: 0xe9c49311b81545cced67ab3313c8f4f938ba1920
+- **[LENDING](https://test.xfiscan.com/address/0x4BB9C8Cc996a0410995E24E867967fD2D34D40Bd)**: 0x4BB9C8Cc996a0410995E24E867967fD2D34D40Bd
 
-- **[USDT](https://explorer.testnet.rootstock.io/address/0xadd24771bcb47b28d85cefb641ef469bc9e52cf7)**: 0xadd24771bcb47b28d85cefb641ef469bc9e52cf7
+- **[USDT](https://test.xfiscan.com/token/0xe8B0c8A6ED34Cffd85a324DA1D139432F3511c17)**: 0xe8B0c8A6ED34Cffd85a324DA1D139432F3511c17
 
-- **[DAI](https://explorer.testnet.rootstock.io/address/0x5816ab7fffd3f5c4d1897539240873b29c0f3aec)**: 0x5816ab7fffd3f5c4d1897539240873b29c0f3aec
+- **[DAI](https://test.xfiscan.com/token/0x1442487bb17414d61e00ad1fd148aade193ad3e9)**: 0x1442487bb17414d61e00ad1fd148aade193ad3e9
 
-- **[ULT](https://explorer.testnet.rootstock.io/address/0x1d5cd5833f43c63f724ebb0f28c6aaed79bf5bf2)**: 0x5816ab7fffd3f5c4d1897539240873b29c0f3aec
+- **[NXF](https://test.xfiscan.com/token/0xd8261aA43AaC9F624853ac94A90d3D02409a9935)**: 0xd8261aA43AaC9F624853ac94A90d3D02409a9935
 
