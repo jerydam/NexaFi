@@ -22,7 +22,7 @@ To connect wallet, go to our [Web App](https://NexaFidapp.vercel.app). For deskt
 
 ### Get testnet XFI for gas fees payments
 ![File](https://ipfs.filebase.io/ipfs/QmeTAgrea7RSrNT3siQuFW98TBsx1SVxpVEemYCwE6UEs4)
-With NexaFi being deployed currently on the testnet of CrossFi, testnet XFI is required to pay for gas fees during transactions. Testnet XFI can be obtained from the [CrossFi testnet faucet](https://faucet.CrossFi.io/).
+With NexaFi being deployed currently on the testnet of CrossFi, testnet XFI is required to pay for gas fees during transactions. Testnet XFI can be obtained from the [CrossFi testnet faucet](https://thirdweb.com/crossfi-testnet?ref=blog.thirdweb.com).
 
 ### Web app homepage
 The homepage of the NexaFi web app is the first page you see when you visit the app. It is the gateway to NexaFi's dashboard and features the wallet connect button as well as other important information about the platform including documentation.
@@ -79,8 +79,8 @@ In future upgrades of this project, more dApp features/services will be integrat
 
 ### P2P Lending/Borrowing Contract
 
-✅ [P2PLending](https://test.xfiscan.com/address/0x4BB9C8Cc996a0410995E24E867967fD2D34D40Bd) 🟢
-- Address: `0x4BB9C8Cc996a0410995E24E867967fD2D34D40Bd`
+✅ [P2PLending](https://test.xfiscan.com/address/0xD2570DD7bdf47B381d11859efB739595f583CAaB) 🟢
+- Address: `0xD2570DD7bdf47B381d11859efB739595f583CAaB`
 
 ### NexaFi ERC20 (NXF) Contract
 

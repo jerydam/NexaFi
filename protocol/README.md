@@ -1,6 +1,6 @@
 ##crossfi testnet contracts
 
-- **[LENDING](https://test.xfiscan.com/address/0x4BB9C8Cc996a0410995E24E867967fD2D34D40Bd)**: 0x4BB9C8Cc996a0410995E24E867967fD2D34D40Bd
+- **[LENDING](https://test.xfiscan.com/address/0xD2570DD7bdf47B381d11859efB739595f583CAaB)**: 0xD2570DD7bdf47B381d11859efB739595f583CAaB
 
 - **[USDT](https://test.xfiscan.com/token/0xe8B0c8A6ED34Cffd85a324DA1D139432F3511c17)**: 0xe8B0c8A6ED34Cffd85a324DA1D139432F3511c17
 

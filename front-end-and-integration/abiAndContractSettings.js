@@ -1062,7 +1062,7 @@ const lendBorrowContractABI = [
     type: "receive",
   },
 ];
-const lendBorrowContractAddress = "0x4BB9C8Cc996a0410995E24E867967fD2D34D40Bd";
+const lendBorrowContractAddress = "0xD2570DD7bdf47B381d11859efB739595f583CAaB";
 
 // USDT contract settings
 const usdtContractABI = [

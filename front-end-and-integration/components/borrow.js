@@ -143,8 +143,8 @@ export default function BorrowSection({displayComponent, setDisplayComponent, ch
          <input style={{display:"inline-block"}} className="w-[30%] float-left text-[120%] bg-[#eee] outline-none text-[#000] placeholder-[#000]" type="number" id="duration" name="duration" onChange={(e) => setDuration(e.target.value)} placeholder='0' />
          <input style={{display:"inline-block"}} className="w-[30%] float-right text-[120%] text-right bg-[#eee] outline-none text-[#000] placeholder-[#000]" type="number" id="XFIamountToBorrow" name="XFIamountToBorrow" onChange={(e) => setXFIamountToBorrow(e.target.value)} placeholder='0' />
          </div>
-         {XFIamountToBorrow > 1000000 && (<div className="text-[#502] text-center clear-both mt-[0.3cm]">XFI amount to borrow must not be more than 1,000,000</div>)}
-         {XFIamountToBorrow < 100 && (<div className="text-[#502] text-center clear-both mt-[0.3cm]">XFI amount to borrow must not be less than 100</div>)}
+         {XFIamountToBorrow > 10 && (<div className="text-[#502] text-center clear-both mt-[0.3cm]">XFI amount to borrow must not be more than 10</div>)}
+         {XFIamountToBorrow < 0.001 && (<div className="text-[#502] text-center clear-both mt-[0.3cm]">XFI amount to borrow must not be less than 0.001</div>)}
          </div>
         </form>
         </div>
