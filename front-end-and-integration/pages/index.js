@@ -66,7 +66,7 @@ export default function Home(){
    </div>
    <div className='mt-[1cm] text-center' style={{transition:"0.3s ease-in-out"}}>
     <Link href="/dashboard"><button className='m-[0.2cm] rounded-md bg-[#502] px-[0.3cm] py-[0.2cm] text-[#fff] generalbutton ecobutton' style={{border:"2px solid #502"}}>Explore dApp <img src="images/blockchain.png" width="25" className='ml-[0.2cm]' style={{display:"inline-block"}}/></button></Link>
-    <Link href="https://github.com/mrpatrick030/Creditas-Rootstock/blob/main/README.md"><button className='m-[0.2cm] rounded-md bg-[#111] px-[0.3cm] py-[0.2cm] text-[#fff] generalbutton docbutton' style={{border:"2px solid #502"}}>Documentation <img src="images/documentation.png" width="25" className='ml-[0.2cm]' style={{display:"inline-block"}}/></button></Link>
+    <Link href="https://github.com/jerydam/NexaFi/blob/master/README.md"><button className='m-[0.2cm] rounded-md bg-[#111] px-[0.3cm] py-[0.2cm] text-[#fff] generalbutton docbutton' style={{border:"2px solid #502"}}>Documentation <img src="images/documentation.png" width="25" className='ml-[0.2cm]' style={{display:"inline-block"}}/></button></Link>
    </div>
    {allowAutoNav ? (<div className='text-center mt-[1cm] text-[#000]'>You will be automatically navigated to the dashboard in {count} seconds....</div>) : 
    (<div className='text-center mt-[1cm] text-[#000] font-[500]'>Auto-navigation cancelled....</div>)}
