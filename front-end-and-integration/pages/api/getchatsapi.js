@@ -3,7 +3,7 @@ import { sql } from '@vercel/postgres';
 export default async function handler(req, res) {
   try {
     const { loanid } = req.body;
-    const query = 'SELECT * FROM NexaFiChat WHERE loanid = $1';
+    const query = 'SELECT * FROM nexafichat WHERE loanid = $1';
     const values = [loanid];
    
     //Process the query

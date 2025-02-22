@@ -1,4 +1,4 @@
-CREATE TABLE NexaFiChat (
+CREATE TABLE nexafichat (
   ID SERIAL PRIMARY KEY,
   lender VARCHAR(100) NOT NULL, 
   borrower VARCHAR(100) NOT NULL, 
