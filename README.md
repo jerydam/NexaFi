@@ -1,4 +1,4 @@
-# NexaFi Documentation [Web App](https://nexa-fi.vercel.app) / [Demo Video](https://youtu.be/fXart6bSfwQ?si=0eZla7T15o4s-IhF)
+# NexaFi Documentation [Web App](https://nexa-fi.vercel.app) / [Demo Video](https://youtu.be/eqhJF17dKtY?si=5gzhKiq3jNTDuJXh)
 ![File](https://supposed-emerald-snake.myfilebase.com/ipfs/QmShL25SVakBFYUEeriZhhHZ9XCGUKHX453W9WqshuDxTd)
 Through its P2P Lending/Borrowing dApp characterized by collaterals, NexaFi is a DeFi protocol that aims to address a number of lending and borrowing-related difficulties. NexaFi provides platform users with an easy-to-use interface by combining front end, integration, and smart contract technologies in a powerful way. The CrossFi test network is the foundation of NexaFi.
 Yes, your data and assets on the platform are safe and only accessible by you with a wallet or email login, but the NexaFi dashboard makes it easy to access the platform's dApp.
